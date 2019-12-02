@@ -1,0 +1,35 @@
+name:                aoc2019
+version:             0.1.0.0
+github:              "jonathanlorimer/aoc2019"
+license:             BSD3
+author:              "Jonathan Lorimer"
+maintainer:          "jonathan_lorimer@mac.com"
+copyright:           "2019 Jonathan Lorimer"
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/jonathanlorimer/aoc2019#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- hspec
+- hspec-discover
+
+library:
+  source-dirs: src
+
+tests:
+  aoc2019-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - aoc2019
